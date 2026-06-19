@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SereneTalk Design System - Calming Mental Health Theme
+   All colors in HSL format */
+
+@layer base {
+  :root {
+    /* Soft gradient background: #EEF2F7 → #F8FAFC */
+    --background: 214 32% 95%;
+    --background-gradient-start: 214 32% 95%;
+    --background-gradient-end: 210 33% 98%;
+    --foreground: 220 13% 30%;
+
+    /* Card - clean white with subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 30%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 30%;
+
+    /* Primary - Soft Blue #4A90E2 (214, 72%, 59%) */
+    --primary: 214 72% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Muted Teal #6BBFBF (180, 39%, 59%) */
+    --secondary: 180 39% 59%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted - Soft Gray #6B7280 */
+    --muted: 220 9% 46%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent - Lavender-Gray for user messages #EDE9F6 */
+    --accent: 256 39% 94%;
+    --accent-foreground: 220 13% 30%;
+
+    /* User message bubble - Lavender-Gray #EDE9F6 */
+    --user-bubble: 256 39% 94%;
+    --user-bubble-foreground: 220 13% 30%;
+
+    /* Bot message bubble - Soft Blue light tint */
+    --bot-bubble: 214 72% 96%;
+    --bot-bubble-foreground: 220 13% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border - Light Gray #E5E7EB */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 214 72% 59%;
+
+    --radius: 1rem;
+
+    /* Sidebar (if needed) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 13% 30%;
+    --sidebar-primary: 214 72% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 256 39% 94%;
+    --sidebar-accent-foreground: 220 13% 30%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 214 72% 59%;
+
+    /* Crisis resources - subtle warm alert */
+    --crisis: 25 95% 53%;
+    --crisis-foreground: 0 0% 100%;
+  }
+
+  /* No dark mode for mental health app - keeping consistent calming theme */
+  .dark {
+    --background: 214 32% 95%;
+    --background-gradient-start: 214 32% 95%;
+    --background-gradient-end: 210 33% 98%;
+    --foreground: 220 13% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 30%;
+    --primary: 214 72% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 180 39% 59%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 9% 46%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 256 39% 94%;
+    --accent-foreground: 220 13% 30%;
+    --user-bubble: 256 39% 94%;
+    --user-bubble-foreground: 220 13% 30%;
+    --bot-bubble: 214 72% 96%;
+    --bot-bubble-foreground: 220 13% 25%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 214 72% 59%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 13% 30%;
+    --sidebar-primary: 214 72% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 256 39% 94%;
+    --sidebar-accent-foreground: 220 13% 30%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 214 72% 59%;
+    --crisis: 25 95% 53%;
+    --crisis-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(180deg, hsl(var(--background-gradient-start)) 0%, hsl(var(--background-gradient-end)) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--border));
+    border-radius: 3px;
+  }
+}
