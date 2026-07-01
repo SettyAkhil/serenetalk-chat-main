@@ -8,7 +8,7 @@ export interface Message {
   timestamp: Date;
 }
 
-const BACKEND_URL = 'http://127.0.0.1:8000/chat';
+const BACKEND_URL = 'https://serenetalk-chat-main-1.onrender.com/chat';
 
 export function useChat() {
   const { language } = useLanguage();

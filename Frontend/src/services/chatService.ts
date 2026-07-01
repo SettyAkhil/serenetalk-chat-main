@@ -1,5 +1,5 @@
 export async function sendMessage(message: string) {
-  const response = await fetch("http://127.0.0.1:8000/chat", {
+    const response = await fetch("https://serenetalk-chat-main-1.onrender.com/chat", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
