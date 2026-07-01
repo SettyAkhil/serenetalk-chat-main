@@ -10,6 +10,9 @@
         # Return the AI response
 
 from fastapi import FastAPI
+from dotenv import load_dotenv
+
+load_dotenv()
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
